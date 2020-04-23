@@ -408,8 +408,9 @@ export function removeAccount (address) {
 export function addNewKeyring (type, opts) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
-    log.debug(`background.addNewKeyring`)
+    console.log('action: addNewKeyring')
     background.addNewKeyring(type, opts, (err) => {
+      console.log('added new keyring?', type, err)
       dispatch(hideLoadingIndication())
       if (err) {
         return dispatch(displayWarning(err.message))
@@ -420,6 +421,7 @@ export function addNewKeyring (type, opts) {
 }
 
 export function importNewAccount (strategy, args) {
+  console.log('importing new account', strategy, args)
   return async (dispatch) => {
     let newState
     dispatch(showLoadingIndication('This may take a while, please be patient.'))
@@ -451,7 +453,9 @@ export function addNewAccount () {
     const oldIdentities = getState().metamask.identities
     dispatch(showLoadingIndication())
     return new Promise((resolve, reject) => {
+      console.log('adding new account')
       background.addNewAccount((err, { identities: newIdentities }) => {
+        console.log('added new account', newIdentities)
         if (err) {
           dispatch(displayWarning(err.message))
           return reject(err)
@@ -472,7 +476,9 @@ export function checkHardwareStatus (deviceName, hdPath) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
     return new Promise((resolve, reject) => {
+      console.log('checking hardware status', deviceName, hdPath)
       background.checkHardwareStatus(deviceName, hdPath, (err, unlocked) => {
+        console.log('got hardware status', unlocked)
         if (err) {
           log.error(err)
           dispatch(displayWarning(err.message))
@@ -514,7 +520,9 @@ export function connectHardware (deviceName, page, hdPath) {
   return (dispatch) => {
     dispatch(showLoadingIndication())
     return new Promise((resolve, reject) => {
+      console.log('connecting hardware:', deviceName, page, hdPath)
       background.connectHardware(deviceName, page, hdPath, (err, accounts) => {
+        console.log('connected hardware', accounts)
         if (err) {
           log.error(err)
           dispatch(displayWarning(err.message))
@@ -531,11 +539,14 @@ export function connectHardware (deviceName, page, hdPath) {
 }
 
 export function unlockHardwareWalletAccount (index, deviceName, hdPath) {
+  console.log('unlockHardwareWalletAccount', index, deviceName, hdPath)
   log.debug(`background.unlockHardwareWalletAccount`, index, deviceName, hdPath)
   return (dispatch) => {
     dispatch(showLoadingIndication())
     return new Promise((resolve, reject) => {
+      console.log('unlocking account', index, deviceName, hdPath)
       background.unlockHardwareWalletAccount(index, deviceName, hdPath, (err) => {
+        console.log('unlocked account')
         if (err) {
           log.error(err)
           dispatch(displayWarning(err.message))
@@ -2020,7 +2031,7 @@ export function forceUpdateMetamaskState (dispatch) {
         dispatch(displayWarning(err.message))
         return reject(err)
       }
-
+      console.log('force state update', newState)
       dispatch(updateMetamaskState(newState))
       resolve(newState)
     })

@@ -46,6 +46,7 @@ export function getAccountType (state) {
   switch (type) {
     case 'Trezor Hardware':
     case 'Ledger Hardware':
+    case 'Lattice Hardware':
       return 'hardware'
     case 'Simple Key Pair':
       return 'imported'
@@ -170,7 +171,6 @@ export function getSelectedAccountCachedBalance (state) {
 export function getSelectedAccount (state) {
   const accounts = getMetaMaskAccounts(state)
   const selectedAddress = getSelectedAddress(state)
-
   return accounts[selectedAddress]
 }
 

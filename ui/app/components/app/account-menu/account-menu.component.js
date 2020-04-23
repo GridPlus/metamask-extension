@@ -122,7 +122,7 @@ export default class AccountMenu extends Component {
       originOfCurrentTab,
     } = this.props
     const { searchQuery } = this.state
-
+    // console.log('renderAccounts:', accounts)
     let filteredIdentities = accounts
     if (searchQuery) {
       this.addressFuse.setCollection(accounts)
@@ -237,6 +237,7 @@ export default class AccountMenu extends Component {
     switch (type) {
       case 'Trezor Hardware':
       case 'Ledger Hardware':
+      case 'Lattice Hardware':
         label = t('hardware')
         break
       case 'Simple Key Pair':

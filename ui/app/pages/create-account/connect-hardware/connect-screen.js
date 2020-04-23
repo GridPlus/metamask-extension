@@ -41,6 +41,23 @@ class ConnectScreen extends Component {
     )
   }
 
+  renderConnectToLatticeButton () {
+    return (
+      <button
+        className={classnames('hw-connect__btn', {
+          'selected': this.state.selectedDevice === 'lattice',
+        })}
+        onClick={_ => this.setState({ selectedDevice: 'lattice' })}
+      >
+        <img
+          className="hw-connect__btn__img"
+          src="images/trezor-logo.svg"
+          alt=""
+        />
+      </button>
+    )
+  }
+
   renderConnectToLedgerButton () {
     return (
       <button
@@ -63,7 +80,8 @@ class ConnectScreen extends Component {
       <div>
         <div className="hw-connect__btn-wrapper">
           {this.renderConnectToLedgerButton()}
-          {this.renderConnectToTrezorButton()}
+          {/* {this.renderConnectToTrezorButton()} */}
+          {this.renderConnectToLatticeButton()}
         </div>
         <Button
           type="primary"
