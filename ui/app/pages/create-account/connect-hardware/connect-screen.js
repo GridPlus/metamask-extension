@@ -51,7 +51,7 @@ class ConnectScreen extends Component {
       >
         <img
           className="hw-connect__btn__img"
-          src="images/trezor-logo.svg"
+          src="images/lattice-logo.svg"
           alt=""
         />
       </button>
@@ -80,7 +80,9 @@ class ConnectScreen extends Component {
       <div>
         <div className="hw-connect__btn-wrapper">
           {this.renderConnectToLedgerButton()}
-          {/* {this.renderConnectToTrezorButton()} */}
+          {this.renderConnectToTrezorButton()}
+        </div>
+        <div className="hw-connect__btn-wrapper" style={{margin: "10px 0 0 0"}}>
           {this.renderConnectToLatticeButton()}
         </div>
         <Button
@@ -129,10 +131,11 @@ class ConnectScreen extends Component {
     const links = {
       trezor: `<a class='hw-connect__get-hw__link' href='https://shop.trezor.io/?a=metamask' target='_blank'>Trezor</a>`,
       ledger: `<a class='hw-connect__get-hw__link' href='https://www.ledger.com/products/ledger-nano-s?r=17c4991a03fa&tracker=MY_TRACKER' target='_blank'>Ledger</a>`,
+      lattice: `<a class='hw-connect__get-hw__link' href='https://gridplus.io/lattice?ref=metamask' target='_blank'>Lattice</a>`,
     }
 
     const text = this.context.t('orderOneHere')
-    const response = text.replace('Trezor', links.trezor).replace('Ledger', links.ledger)
+    const response = text.replace('Trezor', links.trezor).replace('Ledger', links.ledger).replace('Lattice', links.lattice)
 
     return (
       <div

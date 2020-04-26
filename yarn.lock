@@ -10669,12 +10669,12 @@ eth-keyring-controller@^5.3.0:
     loglevel "^1.5.0"
     obs-store "^4.0.3"
 
-eth-lattice-keyring@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.0.1.tgz#d9d9b2e217bc0daf2f849f5a83dca55044301c3c"
-  integrity sha512-f7/1pHYz16tPVkz0NxWcSktGL5JRFpe5H7vTk+3sYdjrAVTzH0vtecwaCUsSDGStUoQR+wdqG06JpmDBxSnX2w==
+eth-lattice-keyring@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.0.3.tgz#0e31d17ca5d2c3f0bf5ec97bfbb11a980ccd472b"
+  integrity sha512-Pqj1bHxp8aHCPRGvwAtRmm2judU0l0KVYVw7QShNH6bPLDVS2Fvba9gthkBW49FW6OvUBWnKRJ5lcmC7mtTagw==
   dependencies:
-    gridplus-sdk "^0.4.7-dev"
+    gridplus-sdk "^0.4.8-dev"
 
 eth-ledger-bridge-keyring@^0.2.0:
   version "0.2.0"
@@ -13477,10 +13477,10 @@ graphql@^0.13.0:
   dependencies:
     iterall "^1.2.1"
 
-gridplus-sdk@^0.4.7-dev:
-  version "0.4.7-dev"
-  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.4.7-dev.tgz#c164638b522bf9d07f186ed592e8fb39cecbf122"
-  integrity sha512-2xv1ZiwUhf2BpB7AGd6NPiY+xz2luzi+ZV/ZaCpR+PYudnvUQvGIO2z6qy2ee2a40BvoQfBDzcCzFRgWRc40HQ==
+gridplus-sdk@^0.4.8-dev:
+  version "0.4.8-dev"
+  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.4.8-dev.tgz#d9a4bdc6b6857b327be95c1a5e40cab89f445019"
+  integrity sha512-RG/HhsQ8MXUd22p6qgrztF8QUDFj5Bj+f5xaP+5ZaeojJPFU92+QFHsh8AoMMI3OciJ+VRTAKudYMIp+LS9UWw==
   dependencies:
     aes-js "^3.1.1"
     bs58 "^4.0.1"

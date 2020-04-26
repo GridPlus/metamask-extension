@@ -914,8 +914,7 @@ export default class MetamaskController extends EventEmitter {
     newAccounts.forEach(address => {
       if (!oldAccounts.includes(address)) {
         // Set the account label to Trezor 1 /  Ledger 1, etc
-        // this.preferencesController.setAccountLabel(address, `${deviceName[0].toUpperCase()}${deviceName.slice(1)} ${parseInt(index, 10) + 1}`)
-        this.preferencesController.setAccountLabel(address, `Some Device ${parseInt(index, 10) + 1}`)
+        this.preferencesController.setAccountLabel(address, `${deviceName[0].toUpperCase()}${deviceName.slice(1)} ${parseInt(index, 10) + 1}`)
         // Select the account
         this.preferencesController.setSelectedAddress(address)
       }
