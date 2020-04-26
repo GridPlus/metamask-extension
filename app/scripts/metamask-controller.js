@@ -70,8 +70,6 @@ import {
 
 import backEndMetaMetricsEvent from './lib/backend-metametrics'
 
-log.setLevel(global.METAMASK_DEBUG ? 'debug' : 'warn')
-
 export default class MetamaskController extends EventEmitter {
 
   /**
@@ -895,22 +893,12 @@ export default class MetamaskController extends EventEmitter {
    * @returns {} keyState
    */
   async unlockHardwareWalletAccount (index, deviceName, hdPath) {
-    log.error('unlocking hardware', index, deviceName, hdPath)
     const keyring = await this.getKeyringForDevice(deviceName, hdPath)
-    log.error('keyring:', keyring)
     keyring.setAccountToUnlock(index)
     const oldAccounts = await this.keyringController.getAccounts()
     const keyState = await this.keyringController.addNewAccount(keyring)
     const newAccounts = await this.keyringController.getAccounts()
     this.preferencesController.setAddresses(newAccounts)
-
-    // I STRONGLY SUSPECT WE ARE NOT GETTING NEW ACCOUNTS HERE.
-    // The keyring controller does not handle errors in `addNewAccount` and it's
-    // possible our keyring is not able to unlock? Anyway, pretty sure this is
-    // the main source of our problem, which is that our accounts are showing up
-    // as `Account 2` rather than `Lattice 1`
-
-
     newAccounts.forEach(address => {
       if (!oldAccounts.includes(address)) {
         // Set the account label to Trezor 1 /  Ledger 1, etc

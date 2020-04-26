@@ -119,6 +119,7 @@ function initializeUi (activeTab, container, connectionStream, cb) {
     if (err) {
       return cb(err)
     }
+    
     launchMetaMaskUi({
       activeTab,
       container,

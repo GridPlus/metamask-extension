@@ -6,7 +6,6 @@ import { hideSidebar, setSelectedToken } from '../../../store/actions'
 import { getSelectedAddress, getSelectedAccount } from '../../../selectors/selectors'
 
 function mapStateToProps (state) {
-  // console.log('wallet-view.container.js: state', state)
   return {
     sidebarOpen: state.appState.sidebar.isOpen,
     identities: state.metamask.identities,

@@ -171,6 +171,7 @@ export function getSelectedAccountCachedBalance (state) {
 export function getSelectedAccount (state) {
   const accounts = getMetaMaskAccounts(state)
   const selectedAddress = getSelectedAddress(state)
+
   return accounts[selectedAddress]
 }
 

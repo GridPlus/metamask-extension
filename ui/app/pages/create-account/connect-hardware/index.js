@@ -59,7 +59,6 @@ class ConnectHardwareForm extends Component {
   }
 
   onAccountChange = (account) => {
-    console.log('onAccountChange:', account)
     this.setState({ selectedAccount: account.toString(), error: null })
   }
 
@@ -137,14 +136,13 @@ class ConnectHardwareForm extends Component {
   }
 
   onUnlockAccount = (device) => {
+
     if (this.state.selectedAccount === null) {
       this.setState({ error: this.context.t('accountSelectionRequired') })
     }
 
-    console.log('trying to unlock account for', device, this.state.selectedAccount)
     this.props.unlockHardwareWalletAccount(this.state.selectedAccount, device)
       .then(_ => {
-        console.log('Unlocked account', device, this.state.selectedAccount)
         this.context.metricsEvent({
           eventOpts: {
             category: 'Accounts',
@@ -154,7 +152,6 @@ class ConnectHardwareForm extends Component {
         })
         this.props.history.push(DEFAULT_ROUTE)
       }).catch(e => {
-        console.log('failed to unlock account', e)
         this.context.metricsEvent({
           eventOpts: {
             category: 'Accounts',
@@ -195,6 +192,7 @@ class ConnectHardwareForm extends Component {
         />
       )
     }
+
     return (
       <AccountList
         onPathChange={this.onPathChange}

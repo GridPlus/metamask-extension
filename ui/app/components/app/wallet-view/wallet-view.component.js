@@ -130,8 +130,6 @@ export default class WalletView extends Component {
       }
     }
 
-    // console.log('identities', identities)
-    // console.log('selectedAddress', selectedAddress)
     return (
       <div className={classnames('wallet-view', 'flex-column', responsiveDisplayClassname)}>
         <AccountDetails

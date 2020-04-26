@@ -122,7 +122,7 @@ export default class AccountMenu extends Component {
       originOfCurrentTab,
     } = this.props
     const { searchQuery } = this.state
-    // console.log('renderAccounts:', accounts)
+
     let filteredIdentities = accounts
     if (searchQuery) {
       this.addressFuse.setCollection(accounts)

@@ -64,7 +64,6 @@ function reduceMetamask (state, action) {
   switch (action.type) {
 
     case actions.UPDATE_METAMASK_STATE:
-      // console.log('UPDATE_METAMASK_STATE', action.value)
       return { ...metamaskState, ...action.value }
 
     case actions.UNLOCK_METAMASK:

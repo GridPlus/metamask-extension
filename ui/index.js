@@ -14,7 +14,6 @@ log.setLevel(global.METAMASK_DEBUG ? 'debug' : 'warn')
 
 function launchMetamaskUi (opts, cb) {
   const { backgroundConnection } = opts
-  console.log('setting background connection', backgroundConnection)
   actions._setBackgroundConnection(backgroundConnection)
   // check if we are unlocked first
   backgroundConnection.getState(function (err, metamaskState) {
