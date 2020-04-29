@@ -407,6 +407,16 @@ describe('MetaMaskController', function () {
       assert.equal(keyrings.length, 1)
     })
 
+    it('should add the Lattice Hardware keyring', async function () {
+      sinon.spy(metamaskController.keyringController, 'addNewKeyring')
+      await metamaskController.connectHardware('lattice', 0).catch(() => null)
+      const keyrings = await metamaskController.keyringController.getKeyringsByType(
+        'Lattice Hardware'
+      )
+      assert.equal(metamaskController.keyringController.addNewKeyring.getCall(0).args, 'Lattice Hardware')
+      assert.equal(keyrings.length, 1)
+    })
+
   })
 
   describe('checkHardwareStatus', function () {

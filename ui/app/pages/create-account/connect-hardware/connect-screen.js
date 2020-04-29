@@ -82,7 +82,7 @@ class ConnectScreen extends Component {
           {this.renderConnectToLedgerButton()}
           {this.renderConnectToTrezorButton()}
         </div>
-        <div className="hw-connect__btn-wrapper" style={{margin: "10px 0 0 0"}}>
+        <div className="hw-connect__btn-wrapper" style={{ margin: '10px 0 0 0' }}>
           {this.renderConnectToLatticeButton()}
         </div>
         <Button
