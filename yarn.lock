@@ -10669,10 +10669,10 @@ eth-keyring-controller@^5.3.0:
     loglevel "^1.5.0"
     obs-store "^4.0.3"
 
-eth-lattice-keyring@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.0.6.tgz#785ef8b9d5e069376d752145a540d3faec7e57fc"
-  integrity sha512-MRE5T+dreOhZiDr75HQ35BY1LZbtwkC7yROQkX3TQrEefHg3tFYv1+IHf7cejTmZ0lCpg2nZzrzGrPJ99b/DNw==
+eth-lattice-keyring@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.1.0.tgz#7a018cc6072aaa66c6ce6a8a39277b8e51934c40"
+  integrity sha512-VBF0jlS+SyiL2wL0ZKugclpsELp9t10gPyd9McHkHmWmQPRAWJv7jezvykdxJ9NlauRDWUssEoB8K8HI9Iw4IQ==
   dependencies:
     gridplus-sdk "^0.4.8-dev"
 
