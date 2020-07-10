@@ -51,7 +51,7 @@ class ConnectScreen extends Component {
       >
         <img
           className="hw-connect__btn__img"
-          src="images/lattice-logo.svg"
+          src="images/lattice-logo.png"
           alt=""
         />
       </button>
