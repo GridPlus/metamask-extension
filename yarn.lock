@@ -6360,18 +6360,18 @@ buffer@^5.0.2, buffer@^5.0.5:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buffer@^5.1.0, buffer@^5.4.2:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
-  integrity sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
-  dependencies:
-    base64-js "^1.0.2"
-    ieee754 "^1.1.4"
-
 buffer@^5.2.1:
   version "5.4.3"
   resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.4.3.tgz#3fbc9c69eb713d323e3fc1a895eee0710c072115"
   integrity sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
+  dependencies:
+    base64-js "^1.0.2"
+    ieee754 "^1.1.4"
+
+buffer@^5.4.2, buffer@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
+  integrity sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -9596,19 +9596,6 @@ elliptic@^6.4.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-elliptic@^6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
-  dependencies:
-    bn.js "^4.4.0"
-    brorand "^1.0.1"
-    hash.js "^1.0.0"
-    hmac-drbg "^1.0.0"
-    inherits "^2.0.1"
-    minimalistic-assert "^1.0.0"
-    minimalistic-crypto-utils "^1.0.0"
-
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
@@ -10669,12 +10656,12 @@ eth-keyring-controller@^5.3.0:
     loglevel "^1.5.0"
     obs-store "^4.0.3"
 
-eth-lattice-keyring@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.1.0.tgz#7a018cc6072aaa66c6ce6a8a39277b8e51934c40"
-  integrity sha512-VBF0jlS+SyiL2wL0ZKugclpsELp9t10gPyd9McHkHmWmQPRAWJv7jezvykdxJ9NlauRDWUssEoB8K8HI9Iw4IQ==
+eth-lattice-keyring@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.1.2.tgz#a0f357e6067216032748e3891a766068d8c64e7f"
+  integrity sha512-3hlSBCx5utmzMPatY3xO89ecIFNknGHYfN5KvVoJerXRpQxRqzDh6lABC2Y2nV1Y2TX6ywSy8PsUTtk8oZHNyg==
   dependencies:
-    gridplus-sdk "^0.4.8-dev"
+    gridplus-sdk "^0.4.18-dev"
 
 eth-ledger-bridge-keyring@^0.2.0:
   version "0.2.0"
@@ -13477,20 +13464,20 @@ graphql@^0.13.0:
   dependencies:
     iterall "^1.2.1"
 
-gridplus-sdk@^0.4.8-dev:
-  version "0.4.8-dev"
-  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.4.8-dev.tgz#d9a4bdc6b6857b327be95c1a5e40cab89f445019"
-  integrity sha512-RG/HhsQ8MXUd22p6qgrztF8QUDFj5Bj+f5xaP+5ZaeojJPFU92+QFHsh8AoMMI3OciJ+VRTAKudYMIp+LS9UWw==
+gridplus-sdk@^0.4.18-dev:
+  version "0.4.18-dev"
+  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.4.18-dev.tgz#f5338da56394671eb2ea156f24a357cf47d7b7fe"
+  integrity sha512-J43iUUS/Mrg7o6QuK7yLmodJ8XlomIxYXfXYFPgiLZUn/upEHbIyMneEQWA9bnZVGobJ/tgLhQwoEAFeokW+zw==
   dependencies:
     aes-js "^3.1.1"
     bs58 "^4.0.1"
     bs58check "^2.1.2"
-    buffer "^5.1.0"
+    buffer "^5.6.0"
     crc-32 "^1.2.0"
     elliptic "^6.4.0"
     js-sha3 "^0.8.0"
     rlp-browser "^1.0.1"
-    secp256k1 "^3.7.1"
+    secp256k1 "3.7.1"
     superagent "^3.8.3"
 
 growl@1.10.3:
@@ -25271,7 +25258,7 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-secp256k1@^3.0.1, secp256k1@^3.6.1, secp256k1@^3.6.2:
+secp256k1@3.7.1, secp256k1@^3.0.1, secp256k1@^3.6.1, secp256k1@^3.6.2:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/secp256k1/-/secp256k1-3.7.1.tgz#12e473e0e9a7c2f2d4d4818e722ad0e14cc1e2f1"
   integrity sha512-1cf8sbnRreXrQFdH6qsg2H71Xw91fCCS9Yp021GnUNJzWJS/py96fS4lHbnTnouLp08Xj6jBoBB6V78Tdbdu5g==
@@ -25282,20 +25269,6 @@ secp256k1@^3.0.1, secp256k1@^3.6.1, secp256k1@^3.6.2:
     create-hash "^1.2.0"
     drbg.js "^1.0.1"
     elliptic "^6.4.1"
-    nan "^2.14.0"
-    safe-buffer "^5.1.2"
-
-secp256k1@^3.7.1:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/secp256k1/-/secp256k1-3.8.0.tgz#28f59f4b01dbee9575f56a47034b7d2e3b3b352d"
-  integrity sha512-k5ke5avRZbtl9Tqx/SA7CbY3NF6Ro+Sj9cZxezFzuBlLDmyqPiL8hJJ+EmzD8Ig4LUDByHJ3/iPOVoRixs/hmw==
-  dependencies:
-    bindings "^1.5.0"
-    bip66 "^1.1.5"
-    bn.js "^4.11.8"
-    create-hash "^1.2.0"
-    drbg.js "^1.0.1"
-    elliptic "^6.5.2"
     nan "^2.14.0"
     safe-buffer "^5.1.2"
 
