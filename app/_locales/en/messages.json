@@ -127,7 +127,7 @@
     "message": "Amount:"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "An Ethereum Wallet in your Browser (with GridPlus Lattice1 support). Please disable ALL other Metamask instances when running this fork!",
     "description": "The description of the application"
   },
   "appName": {
