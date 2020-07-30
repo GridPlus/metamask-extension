@@ -811,6 +811,7 @@ export default class MetamaskController extends EventEmitter {
 
   async getKeyringForDevice (deviceName, hdPath = null) {
     let keyringName = null
+    let keyringOpts = null
     switch (deviceName) {
       case 'trezor':
         keyringName = TrezorKeyring.type
@@ -820,13 +821,14 @@ export default class MetamaskController extends EventEmitter {
         break
       case 'lattice':
         keyringName = LatticeKeyring.type
+        keyringOpts = { name: "MetaMask" };
         break
       default:
         throw new Error('MetamaskController:getKeyringForDevice - Unknown device')
     }
     let keyring = await this.keyringController.getKeyringsByType(keyringName)[0]
     if (!keyring) {
-      keyring = await this.keyringController.addNewKeyring(keyringName)
+      keyring = await this.keyringController.addNewKeyring(keyringName, keyringOpts)
     }
     if (hdPath && keyring.setHdPath) {
       keyring.setHdPath(hdPath)
