@@ -147,11 +147,11 @@
     "message": "Amount:"
   },
   "appDescription": {
-    "message": "An Ethereum Wallet in your Browser",
+    "message": "Metamask + GridPlus Lattice1 support. Please disable your official Metamask extension when running this fork!",
     "description": "The description of the application"
   },
   "appName": {
-    "message": "MetaMask",
+    "message": "MetaMask (GridPlus Fork)",
     "description": "The name of the application"
   },
   "approvalAndAggregatorTxFeeCost": {
@@ -1231,7 +1231,7 @@
     "message": "Currency Symbol (optional)"
   },
   "orderOneHere": {
-    "message": "Order a Trezor or Ledger and keep your funds in cold storage"
+    "message": "Order a Trezor, Ledger, or Lattice and keep your funds in cold storage"
   },
   "origin": {
     "message": "Origin"
@@ -1493,7 +1493,7 @@
     "message": "Select HD Path"
   },
   "selectPathHelp": {
-    "message": "If you don't see your existing Ledger accounts below, try switching paths to \"Legacy (MEW / MyCrypto)\""
+    "message": "If you don't see the accounts you expect, try switching the HD path."
   },
   "selectType": {
     "message": "Select Type"
