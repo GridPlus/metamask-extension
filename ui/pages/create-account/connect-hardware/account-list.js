@@ -31,7 +31,7 @@ class AccountList extends Component {
   }
 
   renderHdPathSelector() {
-    const { selectedPath, hdPaths } = this.props;
+    const { device, selectedPath, hdPaths } = this.props;
     const { pathValue } = this.state;
 
     return (
@@ -43,7 +43,7 @@ class AccountList extends Component {
         <div className="hw-connect__hdPath">
           <Dropdown
             className="hw-connect__hdPath__select"
-            options={hdPaths}
+            options={hdPaths[device.toLowerCase()]}
             selectedOption={pathValue || selectedPath}
             onChange={(value) => {
               this.setPath(value);
@@ -59,11 +59,14 @@ class AccountList extends Component {
   }
 
   renderHeader() {
+    const { device } = this.props;
+    const shouldShowHDPaths = (device.toLowerCase() === 'ledger' || device.toLowerCase() === 'lattice');
     return (
       <div className="hw-connect">
         <h3 className="hw-connect__unlock-title">
           {this.context.t('selectAnAccount')}
         </h3>
+        {shouldShowHDPaths ? this.renderHdPathSelector() : null}
         <h3 className="hw-connect__hdPath__title">
           {this.context.t('selectAnAccount')}
         </h3>

@@ -131,6 +131,7 @@
     "eth-keyring-controller": "^6.2.0",
     "eth-method-registry": "^2.0.0",
     "eth-phishing-detect": "^1.1.14",
+    "eth-lattice-keyring": "^0.2.26",
     "eth-query": "^2.1.2",
     "eth-rpc-errors": "^4.0.2",
     "eth-sig-util": "^3.0.0",
@@ -320,6 +321,7 @@
   },
   "lavamoat": {
     "allowScripts": {
+      "gridplus-sdk": false,
       "chromedriver": true,
       "geckodriver": true,
       "@sentry/cli": true,
